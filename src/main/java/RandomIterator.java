@@ -10,10 +10,10 @@ public class RandomIterator implements Iterator<Integer> {
     public RandomIterator(int min, int max) {
         this.min = min;
         this.max = max;
+        random = new Random();
     }
 
     public int getRandomInt() {
-        random = new Random();
         return random.nextInt((max - min) + 1) + min;
     }
 
